@@ -4,7 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PathVariable;//路徑參數
+import org.springframework.web.bind.annotation.RequestParam;//查詢參數
 
 @SpringBootApplication
 @RestController
@@ -29,6 +30,11 @@ public class Hello {
     @GetMapping("/square/{number}")//此專案的算術頁面
     public static String resultreply(@PathVariable int number){
         return "The result is"+(number+number);
+    }
+    
+    @GetMapping("/user")//此專案的user id查詢頁面
+    public static String useridreply(@RequestParam int id){
+        return "The page userId is "+id;
     }
     
 }
