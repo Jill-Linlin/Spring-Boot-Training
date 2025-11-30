@@ -17,10 +17,15 @@
     <!-- 使用的 Java 版本 -->
     <java.version>17</java.version>
   </properties>
-  <dependencies>
+  <dependencies> <!--專案依賴套件-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <!--thymeleaf套件插入-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-thymeleaf</artifactId>
     </dependency>
   </dependencies>
   <build>
